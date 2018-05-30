@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Company;
 class CompanyController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        //
+        return view('company.index');
+        
     }
 
     /**
@@ -34,7 +35,16 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $company=new Company;
+        $company->cin=$request->cin;
+        $company->name=$request->name;
+        $company->email=$request->email;
+        $company->password=$request->password;
+        $company->contact=$request->contact;
+        $company->address=$request->address;
+        $company->company_type=$request->company_type;
+        $company->save();
+
     }
 
     /**

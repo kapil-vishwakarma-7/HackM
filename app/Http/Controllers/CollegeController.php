@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\College;
 class CollegeController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class CollegeController extends Controller
      */
     public function index()
     {
-        //
+        return view('college.index');
+        
     }
 
     /**
@@ -34,7 +35,16 @@ class CollegeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $college=new College;
+        $college->university_id=$request->university_id;
+        $college->code=$request->code;
+        $college->name=$request->name;
+        $college->contact=$request->contact;
+        $college->email=$request->email;
+        $college->password=$request->password;
+        $college->address=$request->address;
+        $college->college_type=$request->college_type;
+        $college->save();
     }
 
     /**

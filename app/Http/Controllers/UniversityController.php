@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\University;
+
 
 use Illuminate\Http\Request;
 
@@ -13,8 +15,8 @@ class UniversityController extends Controller
      */
     public function index()
     {
-        //
-    }
+        return view('university.index');
+   }
 
     /**
      * Show the form for creating a new resource.
@@ -34,7 +36,18 @@ class UniversityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $university=new University();
+        $university->code= $request->code;
+        $university->name= $request->name;
+        $university->address= $request->address;
+        $university->contact= $request->contact;
+        $university->email= $request->email;
+        $university->password= $request->password;
+        $university->university_type= $request->university_type;
+        $university->grade= $request->grade;
+        $university->save();
+        
+
     }
 
     /**
@@ -79,6 +92,6 @@ class UniversityController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
 }
