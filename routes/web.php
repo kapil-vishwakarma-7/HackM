@@ -20,6 +20,7 @@ Route::get('/',function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
 
 
 
@@ -41,3 +42,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 // 	});
 
 // });
+=======
+Route::get('/h', 'HomeController@index')->name('home');
+>>>>>>> b6be62d28b7b5999c8f28fde3d198035c943acb5
