@@ -11,9 +11,33 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::view('/','welcome');
+Route::get('/',function(){
+	return view('welcome');
 });
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+//public routes
+
+
+
+
+// private routes
+
+// Route::prefix('student')->group(function(){
+
+// 	Route::get('login',function(){
+// 		return echo "Success";
+// 	});
+// 	Route::get('/',function(){
+// 		return echo "Success";
+// 	});
+
+// });
