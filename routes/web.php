@@ -48,3 +48,23 @@ Route::resource('student','StudentController');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+Route::name('dash.university.')->prefix('dashboard/university')->group(
+	function(){
+		
+		Route::get('/','UniversityController@index');
+		
+});
+
+
+Route::name('dash.college.')->prefix('dashboard/college')->group(
+	function(){
+		Route::get('/','CollegeController@index');
+		//student
+		Route::get('approve','CollegeController@approve')->name('approve');
+		Route::get('studentlist','CollegeController@studentList')->name('studentlist');
+		
+		// company
+		Route::get('companylist','CollegeController@companyList')->name('companylist');
+
+});
