@@ -28,7 +28,15 @@ Route::get('col',function(){
 Route::get('uni',function(){
 	return view('university.index');
 });
+Route::get('showcollege',function(){
+	return view('university.college_show');
+});
 
+Route::get('about',function(){
+	return view('about');
+});
+Route::view('contact','contact');
+Route::view('placement','placement');
 
 Auth::routes();
 

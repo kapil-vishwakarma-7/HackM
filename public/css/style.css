@@ -1,9 +1,4 @@
-/*--
-	Author: proj
-	Author URL: http://proj.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
---*/
+
 
 html,
 body {
@@ -26,6 +21,14 @@ a:hover {
 	text-decoration: none;
 }
 
+.banner-inner2 {
+    background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/placement.jpg) no-repeat;
+    background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/placement.jpg) no-repeat;
+    background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/placement.jpg) no-repeat;
+    background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/placement.jpg) no-repeat;
+    background-size: cover;
+    min-height: 230px;
+}
 input[type="button"],
 input[type="submit"],
 input[type="text"],
