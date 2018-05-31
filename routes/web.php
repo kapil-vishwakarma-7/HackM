@@ -33,5 +33,8 @@ Route::get('uni',function(){
 Auth::routes();
 
 Route::resource('university','UniversityController');
+Route::resource('college','CollegeController');
+Route::resource('company','CompanyController');
+Route::resource('student','StudentController');
 
 Route::get('/home', 'HomeController@index')->name('home');
