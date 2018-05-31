@@ -16,7 +16,27 @@ Route::get('/',function(){
 	return view('welcome');
 });
 
+<<<<<<< HEAD
 Route::view('about','about');
+=======
+Route::get('adm',function(){
+	return view('admin.index');
+});
+Route::get('com',function(){
+	return view('company.index');
+});
+Route::get('col',function(){
+	return view('college.index');
+});
+Route::get('uni',function(){
+	return view('university.index');
+});
+Route::get('showcollege','UniversityController@showCollege');
+
+Route::get('about',function(){
+	return view('about');
+});
+>>>>>>> 285c72af55a1293ba52091a5a5287484fa3d3226
 Route::view('contact','contact');
 Route::view('placement','placement');
 

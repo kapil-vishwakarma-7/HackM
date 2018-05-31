@@ -11,10 +11,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>Anna</td>
-      </tr> 
+      @foreach($university->pendingCollege as $clg)
+        <tr>
+          <td>{{ $clg->college_code }}</td>
+          <td>{{ $clg->name }}</td>
+        </tr>
+      @endforeach
     </tbody>
   </table>
 </div>
