@@ -190,35 +190,39 @@
 				<h2>Student Sign Up </h2>
 				
 
-						<form action="#" method="post">
+						<form action="{{ route('student.store') }}" method="POST">
+						{{csrf_field()}}
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="firstname" required=""> 
+							<input type="text" name="name" placeholder="Full Name" required=""> 
 						</div>
-						<div class="input-group">
-							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="lastname" required=""> 
-						</div>
+						
 
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="contact" required=""> 
+							<input type="text"  name="contact" placeholder="contact" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="Adhar ID" required=""> 
+							<input type="text" name="eadhar" placeholder="Adhar ID" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-							<input type="email" placeholder="Email" required=""> 
+							<input type="email" name="email" placeholder="Email" required=""> 
+						</div>
+						<div class="input-group">
+							<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+							<select name="college_name">
+								<option value="sistec">SISTec</option>
+							</select>
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="Address" required=""> 
+							<input type="text"  name="address" placeholder="Address" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-unlock" aria-hidden="true"><span>
-							</i><input type="Password" placeholder="Password" required="">
+							</i><input type="Password" name="password" placeholder="Password" required="">
 						</div>
 							<input type="checkbox" value="remember-me" /> <h4>Keep me signed in  </h4>        
 							<button class="btn btn-danger btn-block" type="submit">Sign Up</button >
@@ -231,36 +235,46 @@
 				<h2>College Sign Up </h2>
 				
 
-						<form action="#" method="post">
+						<form action="{{ route('college.store') }}" method="POST">
+						 {{csrf_field()}}
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="College Name" required=""> 
+							<input type="text" placeholder="College Name" required="" name="name"> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="College Code" required=""> 
+							<input type="text" placeholder="College Code" name="code" required=""> 
 						</div>
 
 						
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="College type" required=""> 
+							<input type="text" placeholder="College type" name="college_type" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="Contact" required=""> 
+							<select name="university_id">
+								<option value="1">RGPV</option>
+								<option value="2">RGPV</option>
+								<option value="3">RGPV</option>
+								<option value="4">RGPV</option>
+							</select>
+						</div>
+						<div class="input-group">
+							<span><i class="fa fa-user" aria-hidden="true"></i></span>
+							<input type="text" placeholder="Contact" name="contact" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-							<input type="email" placeholder="Email" required=""> 
+							<input type="email" placeholder="Email" name="email" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="Address" required=""> 
+							<input type="text" placeholder="Address" name="address" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-unlock" aria-hidden="true"><span>
-							</i><input type="Password" placeholder="Password" required="">
+							</i><input type="Password" name="password" placeholder="Password" required="">
 						</div>
 
 							<input type="checkbox" value="remember-me" /> <h4>Keep me signed in  </h4>        
@@ -321,36 +335,37 @@
 				<h2>Company Sign Up </h2>
 				
 
-						<form action="#" method="post">
+						<form action="{{ route('company.store') }}" method="POST">
+						{{csrf_field()}}
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="Company Name" required=""> 
+							<input type="text" placeholder="Company Name" name="name" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="CIN Number" required=""> 
+							<input type="text" placeholder="CIN Number" name="cin" required=""> 
 						</div>
 
 						
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="Company type" required=""> 
+							<input type="text" placeholder="Company type" name="company_type" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="Contact" required=""> 
+							<input type="text" placeholder="Contact" name="contact" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-							<input type="email" placeholder="Email" required=""> 
+							<input type="email" placeholder="Email" name="email" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="Address" required=""> 
+							<input type="text" placeholder="Address" name="address" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-unlock" aria-hidden="true"><span>
-							</i><input type="Password" placeholder="Password" required="">
+							</i><input type="Password" name="password" placeholder="Password" required="">
 						</div>
 
 							<input type="checkbox" value="remember-me" /> <h4>Keep me signed in  </h4>        

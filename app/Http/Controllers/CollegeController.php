@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\College;
+use App\User;
+
 class CollegeController extends Controller
 {
     /**
@@ -35,13 +37,21 @@ class CollegeController extends Controller
      */
     public function store(Request $request)
     {
+        $user = new User;
+        $user->email = $request->email;
+        // $user->email = 'asdj';
+        $user->password = bcrypt($request->password);
+        $user->role = 'col';
+        //$user->name = $request->name;
+        $user->save();
+
         $college=new College;
+        $college->user_id = $user->id;
         $college->university_id=$request->university_id;
         $college->code=$request->code;
         $college->name=$request->name;
         $college->contact=$request->contact;
         $college->email=$request->email;
-        $college->password=$request->password;
         $college->address=$request->address;
         $college->college_type=$request->college_type;
         $college->save();
@@ -55,7 +65,7 @@ class CollegeController extends Controller
      */
     public function show($id)
     {
-        //
+        return College::find($id);
     }
 
     /**

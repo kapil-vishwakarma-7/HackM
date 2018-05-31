@@ -71,7 +71,8 @@ class UniversityController extends Controller
      */
     public function show($id)
     {
-        //
+        return University::find($id);
+        
     }
 
     /**

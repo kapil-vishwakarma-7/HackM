@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Company;
+use App\Student;
 use App\User;
-class CompanyController extends Controller
+
+class StudentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,7 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        return view('company.index');
-        
+        //
     }
 
     /**
@@ -36,23 +36,23 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        $user = new User;
+         $user = new User;
         $user->email = $request->email;
         // $user->email = 'asdj';
         $user->password = bcrypt($request->password);
-        $user->role = 'com';
+        $user->role = 'stu';
         //$user->name = $request->name;
         $user->save();
-        $company=new Company;
-        $company->user_id=$user->id;
-        $company->cin=$request->cin;
-        $company->name=$request->name;
-        $company->email=$request->email;
-        $company->contact=$request->contact;
-        $company->address=$request->address;
-        $company->company_type=$request->company_type;
-        $company->save();
+        $student=new Student;
 
+        $student->college_name=$request->college_name;
+        $student->user_id=$user->id;
+        $student->name=$request->name;
+        $student->email=$request->email;
+        $student->contact=$request->contact;
+        $student->permanent_address=$request->permanent_address;
+        $student->eadhar=$request->eadhar;
+        $student->save();
     }
 
     /**
@@ -63,8 +63,8 @@ class CompanyController extends Controller
      */
     public function show($id)
     {
-        return Company::find($id);
-       
+        return Student::find($id);
+        
     }
 
     /**
