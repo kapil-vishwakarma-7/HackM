@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\University;
+use App\User;
 
 
 use Illuminate\Http\Request;
@@ -36,6 +37,17 @@ class UniversityController extends Controller
      */
     public function store(Request $request)
     {
+        
+        //create user for login 
+        $user = new User;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->role = 'uni';
+        // $user->name = $request->name;
+        $user->save();
+        // create university
+
+        $university->user_id = $user->id;
         $university=new University();
         $university->code= $request->code;
         $university->name= $request->name;
