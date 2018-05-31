@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/cp';
 
     /**
      * Create a new controller instance.
@@ -35,5 +35,22 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+
+     protected function authenticated($request, $user)
+    {
+        if($user->role == 'col'){
+            return redirect('/college');
+        }
+        if($user->role == 'stu') {
+            return redirect('/stu');
+        }
+        if($user->role == 'uni') {
+            return redirect('/university');
+        }
+        if($user->role == 'com') {
+            return redirect('/company');
+        }
     }
 }

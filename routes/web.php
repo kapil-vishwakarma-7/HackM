@@ -30,6 +30,7 @@ Route::get('uni',function(){
 });
 
 
+
 Auth::routes();
 
 Route::resource('university','UniversityController');
@@ -38,3 +39,9 @@ Route::resource('company','CompanyController');
 Route::resource('student','StudentController');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::get('col/test',function(){
+	return view('college.newpage');
+});
