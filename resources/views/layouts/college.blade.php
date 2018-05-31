@@ -3,7 +3,6 @@
 
         <!-- START PAGE CONTAINER -->
         <div class="page-container">
-            
             <!-- START PAGE SIDEBAR -->
             <div class="page-sidebar">
                 <!-- START X-NAVIGATION -->
@@ -38,8 +37,8 @@
                         <a href="#"><span class="fa fa-users"></span> <span class="xn-text">Student</span></a>
                         <ul>
                             <li><a href="#"><span class="fa fa-arrow-right"></span> Verify Student</a></li>
-                            <li><a href="#"><span class="fa fa-arrow-right"></span> View Student </a></li>
-                             <li><a href="#"><span class="fa fa-arrow-right"></span> Placed Student</a></li>
+                            <li><a href={{route('dash.college.studentlist')}}><span class="fa fa-arrow-right"></span> View Student </a></li>
+                             <li><a href='#'><span class="fa fa-arrow-right"></span> Placed Student</a></li>
                              <li><a href="#"><span class="fa fa-arrow-right"></span> Not Placed</a></li>
                               <li><a href="#"><span class="fa fa-arrow-right"></span> Send message</a></li>
                              

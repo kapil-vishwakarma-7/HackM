@@ -37,15 +37,29 @@
 						<i class="fab fa-linode"></i> Placement Portal</a>
 				</div>
 				<div class="col-md-4 top-forms text-center mt-lg-3 mt-md-1 mt-0">
-					<span>Welcome Back!</span>
-					<span class="mx-lg-4 mx-md-2  mx-1">
-						<a href="" data-toggle="modal" data-target="#modalLoginForm" >
-							<i class="fas fa-lock"></i> Sign In</a>
-					</span>
-					<span>
-						<a href="" data-toggle="modal" data-target="#modaRegistrationForm"  >
-							<i class="far fa-user"></i> Register</a>
-					</span>
+					
+					@guest
+						<span>Welcome Back!</span>
+						<span class="mx-lg-4 mx-md-2  mx-1">
+							<a href="" data-toggle="modal" data-target="#modalLoginForm" >
+								<i class="fas fa-lock"></i> Sign In</a>
+						</span>
+						<span>
+							<a href="" data-toggle="modal" data-target="#modaRegistrationForm"  >
+								<i class="far fa-user"></i> Register</a>
+						</span>
+					@endguest
+					@auth
+						<span class="mx-lg-4 mx-md-2  mx-1">
+							<a href="">
+								<i class="fas fa-lock"></i> {{Auth::user()->email}}</a>
+						</span>
+						<span>
+							<a href="">
+								<i class="far fa-"></i> Sign Out</a>
+						</span>
+					@endauth
+
 				</div>
 				<div class="col-md-4 log-icons text-right">
 
