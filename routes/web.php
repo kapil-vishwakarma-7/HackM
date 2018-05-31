@@ -1,5 +1,6 @@
 <?php
-
+use App\College;
+use App\University;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +14,9 @@
 
 // Route::view('/','welcome');
 Route::get('/',function(){
-	return view('welcome');
+	$college = College::all();
+	$university = University::all();
+	return view('welcome',['college'=>$college,'university'=>$university]);
 });
 
 Route::view('contact','contact');
