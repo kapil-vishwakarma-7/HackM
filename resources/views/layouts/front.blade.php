@@ -55,8 +55,12 @@
 								<i class="fas fa-lock"></i> {{Auth::user()->email}}</a>
 						</span>
 						<span>
-							<a href="">
-								<i class="far fa-"></i> Sign Out</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+							<a href="{{ route('logout') }}"                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                            Signout
+                            </a>
 						</span>
 					@endauth
 
