@@ -16,6 +16,18 @@ Route::get('/',function(){
 	return view('welcome');
 });
 
+Route::get('adm',function(){
+	return view('admin.index');
+});
+Route::get('com',function(){
+	return view('company.index');
+});
+Route::get('col',function(){
+	return view('college.index');
+});
+Route::get('uni',function(){
+	return view('university.index');
+});
 
 Auth::routes();
 
