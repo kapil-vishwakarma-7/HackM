@@ -38,6 +38,7 @@ Route::get('about',function(){
 Route::view('contact','contact');
 Route::view('placement','placement');
 
+
 Auth::routes();
 
 Route::resource('university','UniversityController');
@@ -47,9 +48,3 @@ Route::resource('student','StudentController');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('col/test',function(){
-	return view('college.student_approval');
-});
-Route::get('col/test1',function(){
-	return view('college.student_list');
-});

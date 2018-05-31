@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\University;
 use App\User;
-
+use Auth;
 
 use Illuminate\Http\Request;
 
@@ -16,8 +16,9 @@ class UniversityController extends Controller
      */
     public function index()
     {
-        return view('university.index');
-   }
+        $university = Auth::user()->university;
+        return view('university.index',$university);
+    }
 
     /**
      * Show the form for creating a new resource.

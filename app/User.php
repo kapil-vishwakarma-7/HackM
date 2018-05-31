@@ -29,12 +29,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function socialAccounts(){
-        return $this->hasMany(SocialAccount::class);
+    public function university(){
+        return $this->hasOne('App\University','user_id','id');
     }
 
-    public function posts(){
-        return $this->hasMany(Post::class);
-    }
 }
