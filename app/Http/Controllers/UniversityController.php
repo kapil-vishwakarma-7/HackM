@@ -14,14 +14,10 @@ class UniversityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public $university;
-    public function __construct(){
-        $university = Auth::user();
-    }
     public function index()
     {
-        dd($university);
-        return view('university.index');
+        $university = Auth::user()->university;
+        return view('university.index',$university);
     }
 
     /**
