@@ -140,15 +140,17 @@
             </div>
             <div class="modal-body mx-3">
                <div  >
-               	<form action="#" method="post">
+               	<form action="{{url('login')}}" method="POST">
+               		{{ csrf_field() }}
                		<div class="input-group">
 							<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-							<input type="email" placeholder="Email" required=""> 
+							<input type="email" name="email" placeholder="Email" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-unlock" aria-hidden="true"><span>
-							</i><input type="Password" placeholder="Password" required="">
+							</i><input type="Password" name="password" placeholder="Password" required="">
 						</div>
+               		
 <button class="btn btn-danger btn-block" type="submit">Sign In</button >
 </form>
             </div>
