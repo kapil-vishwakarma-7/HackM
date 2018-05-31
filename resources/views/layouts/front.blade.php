@@ -33,7 +33,7 @@
 		<div class="top-bar_sub_w3layouts container-fluid">
 			<div class="row">
 				<div class="col-md-4 logo text-left">
-					<a class="navbar-brand" href="index.html">
+					<a class="navbar-brand" href="{{ url('/') }}">
 						<i class="fab fa-linode"></i> Placement Portal</a>
 				</div>
 				<div class="col-md-4 top-forms text-center mt-lg-3 mt-md-1 mt-0">
@@ -89,7 +89,7 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item ">
-								<a class="nav-link" href="#">Home
+								<a class="nav-link" href="{{ url('/') }}">Home
 									
 								</a>
 							</li>
