@@ -38,23 +38,24 @@ class UniversityController extends Controller
     public function store(Request $request)
     {
         
+        // dd($request);
         //create user for login 
         $user = new User;
         $user->email = $request->email;
+        // $user->email = 'asdj';
         $user->password = bcrypt($request->password);
         $user->role = 'uni';
-        // $user->name = $request->name;
+        //$user->name = $request->name;
         $user->save();
-        // create university
 
+        // create university
+        $university=new University;
         $university->user_id = $user->id;
-        $university=new University();
         $university->code= $request->code;
         $university->name= $request->name;
         $university->address= $request->address;
         $university->contact= $request->contact;
         $university->email= $request->email;
-        $university->password= $request->password;
         $university->university_type= $request->university_type;
         $university->grade= $request->grade;
         $university->save();

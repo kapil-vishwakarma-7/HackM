@@ -273,40 +273,41 @@
 				<h2>University Sign Up </h2>
 				
 
-						<form action="#" method="post">
+						<form action="{{ route('university.store') }}" method="POST">
+							{{csrf_field()}}
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="University Name" required=""> 
+							<input type="text" placeholder="University Name" required="" name="name"> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="University Code" required=""> 
+							<input type="text" placeholder="University Code" required="" name="code"> 
 						</div>
 
 						
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="University type" required=""> 
+							<input type="text" placeholder="University type" required="" name="university_type"> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="Grade" required=""> 
+							<input type="text" placeholder="Grade" name="grade" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="Contact" required=""> 
+							<input type="text" placeholder="Contact" required="" name="contact"> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-							<input type="email" placeholder="Email" required=""> 
+							<input type="email" placeholder="Email" name="email" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<input type="text" placeholder="Address" required=""> 
+							<input type="text" placeholder="Address" required="" name="address"> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-unlock" aria-hidden="true"><span>
-							</i><input type="Password" placeholder="Password" required="">
+							</i><input type="Password" placeholder="Password" required="" name="password">
 						</div>
 
 							<input type="checkbox" value="remember-me" /> <h4>Keep me signed in  </h4>        

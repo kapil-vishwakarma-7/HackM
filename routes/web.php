@@ -29,6 +29,9 @@ Route::get('uni',function(){
 	return view('university.index');
 });
 
+
 Auth::routes();
+
+Route::resource('university','UniversityController');
 
 Route::get('/home', 'HomeController@index')->name('home');
