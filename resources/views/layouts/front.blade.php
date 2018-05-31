@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-	<title>maharashtra Placement Portal | @yield('title') </title>
+	<title>Maharashtra Placement Portal | @yield('title') </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta name="keywords" content="Placement Portal maharashtra " />
@@ -23,6 +23,7 @@
 	<link href={{url("css/fontawesome-all.css")}} rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
 	    rel="stylesheet">
+<link href={{ url("css/contact.css") }} rel='stylesheet' type='text/css' />
 </head>
 
 <body>
@@ -87,19 +88,19 @@
 
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav mr-auto">
-							<li class="nav-item active">
+							<li class="nav-item ">
 								<a class="nav-link" href="#">Home
-									<span class="sr-only">(current)</span>
+									
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="about.html">About</a>
+								<a class="nav-link" href="{{ url('about') }}">About</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="contact.html">Placement</a>
+								<a class="nav-link" href="{{ url('placement') }}">Placement</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="contact.html">Contact</a>
+								<a class="nav-link" href="{{ url('contact') }}">Contact</a>
 							</li>
 
 						</ul>
@@ -124,7 +125,53 @@
 
 <!-- /footer -->
 
+<footer>
+		<div class="container">
+			
+			<!-- footer -->
+			<div class="footer-cpy text-center">
+				<div class="footer-social">
+					<div class="copyrighttop">
+						<ul>
+							<li class="mx-3">
+								<a class="facebook" href="#">
+									<i class="fab fa-facebook-f"></i>
+									<span>Facebook</span>
+								</a>
+							</li>
+							<li>
+								<a class="facebook" href="#">
+									<i class="fab fa-twitter"></i>
+									<span>Twitter</span>
+								</a>
+							</li>
+							<li class="mx-3">
+								<a class="facebook" href="#">
+									<i class="fab fa-google-plus-g"></i>
+									<span>Google+</span>
+								</a>
+							</li>
+							<li>
+								<a class="facebook" href="#">
+									<i class="fab fa-pinterest-p"></i>
+									<span>Pinterest</span>
+								</a>
+							</li>
+						</ul>
 
+					</div>
+				</div>
+				<div>
+					<p>© 2018 Placement Portal. All Rights Reserved | Design by
+						<a href="beangate.in"> BenaGate IT Solutions</a>
+					</p>
+
+				</div>
+			</div>
+
+			<!-- //footer -->
+		</div>
+	</footer>
 
 	<!--/model-->
 
@@ -140,15 +187,17 @@
             </div>
             <div class="modal-body mx-3">
                <div  >
-               	<form action="#" method="post">
+               	<form action="{{url('login')}}" method="POST">
+               		{{ csrf_field() }}
                		<div class="input-group">
 							<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-							<input type="email" placeholder="Email" required=""> 
+							<input type="email" name="email" placeholder="Email" required=""> 
 						</div>
 						<div class="input-group">
 							<span><i class="fa fa-unlock" aria-hidden="true"><span>
-							</i><input type="Password" placeholder="Password" required="">
+							</i><input type="Password" name="password" placeholder="Password" required="">
 						</div>
+               		
 <button class="btn btn-danger btn-block" type="submit">Sign In</button >
 </form>
             </div>
