@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\University;
 use App\User;
+use App\College;
 use Auth;
 
 use Illuminate\Http\Request;
@@ -20,11 +21,17 @@ class UniversityController extends Controller
         return view('university.index',['university'=>$university]);
     }
 
-    public function showCollege()
+    public function showPendingCollege()
+    {
+        $university = Auth::user()->university;
+        // dd($university->pendingCollege->first()->college);
+        return view('university.pending_college_show',['university'=>$university]);
+    }
+    public function showVerifyCollege()
     {
         $university = Auth::user()->university;
         // dd($university->pendingCollege);
-        return view('university.college_show',['university'=>$university]);
+        return view('university.verify_college_show',['university'=>$university]);
     }
 
     /**
@@ -35,6 +42,14 @@ class UniversityController extends Controller
     public function create()
     {
         //
+    }
+    // ajax
+    public function verifyCollege(Request $r){
+        $college = College::find($r->id);
+//        dd($university);
+        $college->pending = 0;
+        $college->save();
+        return response()->json($r,200);
     }
 
     /**
