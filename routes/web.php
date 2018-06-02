@@ -18,10 +18,21 @@ Route::get('/',function(){
 	$university = University::all();
 	return view('welcome',['college'=>$college,'university'=>$university]);
 });
-
-Route::view('contact','contact');
-Route::view('about','about');
-Route::view('placement','placement');
+Route::get('contact',function(){
+	$college = College::all();
+	$university = University::all();
+	return view('contact',['college'=>$college,'university'=>$university]);
+});
+Route::get('about',function(){
+	$college = College::all();
+	$university = University::all();
+	return view('about',['college'=>$college,'university'=>$university]);
+});
+Route::get('placement',function(){
+	$college = College::all();
+	$university = University::all();
+	return view('placement',['college'=>$college,'university'=>$university]);
+});
 
 
 
@@ -36,7 +47,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('jare','UniversityController@verifyCollege');
-Route::get('verify','AdminController@verifyUniversity');
+Route::get('a','AdminController@verifyUniversity');
 
 
 Route::name('dash.university.')->prefix('dashboard/university')->group(

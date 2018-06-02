@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('section')
 <div class="container">
- <h1>Verify  University</h1> 
+ <h1>Verified University</h1> 
 <div class="panel-body">
 
  <table id="customers2" class="table datatable">
