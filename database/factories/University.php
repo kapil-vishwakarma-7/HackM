@@ -4,14 +4,12 @@ use Faker\Generator as Faker;
 
 /* @var Illuminate\Database\Eloquent\Factory $factory */
 
-$factory->define(App\College::class, function (Faker $faker) {
+$factory->define(App\Company::class, function (Faker $faker) {
     return [
-    	'enrollment_no' => $faker->randomNumber,
-        'user_id'=>$faker->randomNumber,
+        'name' => $faker->word.'Pvt. Ltd.',
+        'user_id' => $faker->randomNumber,
         'email' => $faker->unique()->email,
         'contact' => $faker->phoneNumber,
-        'eadhar'=>$faker->randomNumber(12)
-
     ];
 });
 
