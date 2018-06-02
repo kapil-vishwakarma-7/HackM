@@ -48,7 +48,7 @@ $('.submit').on('click',function(e){
     e.preventDefault(e);
         $.ajax({
         type:"GET",
-        url:'/verify',
+        url:'/a',
         data: {'id' : $(this).data('id')},
         success: function(data){
             // alert(data);

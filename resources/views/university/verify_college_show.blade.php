@@ -1,7 +1,7 @@
 @extends('layouts.university')
 @section('section')
 <div class="container">
- <h1>Verify  Colleges</h1> 
+ <h1>Verified Colleges</h1> 
 <div class="panel-body">
 
  <table id="customers2" class="table datatable">
