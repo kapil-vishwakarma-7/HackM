@@ -48,7 +48,7 @@ class CollegeController extends Controller
         $college=new College;
         $college->user_id = $user->id;
         $college->university_id=$request->university_id;
-        $college->college_code=$request->code;
+        $college->college=$request->code;
         $college->name=$request->name;
         $college->contact=$request->contact;
         $college->email=$request->email;

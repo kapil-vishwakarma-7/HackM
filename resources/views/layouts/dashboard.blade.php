@@ -30,7 +30,15 @@
                     </div>
                     <div class="mb-footer">
                         <div class="pull-right">
-                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+                            
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                            <a class="btn btn-success btn-lg" href="{{ route('logout') }}"                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                            Signout
+                            </a>
+
                             <button class="btn btn-default btn-lg mb-control-close">No</button>
                         </div>
                     </div>
