@@ -50,13 +50,9 @@ Route::name('dash.college.')->prefix('dashboard/college')->group(
 		Route::get('/','CollegeController@index');
 		//student
 		Route::get('approve','CollegeController@approve')->name('approve');
-		Route::get('studentlist','CollegeController@studentList')->name('studentlist');
-		
+		Route::get('studentlist','CollegeController@studentList')->name('studentlist');		
 		Route::get('placedstudent','CollegeController@placedStudent')->name('placedstudent');
-		Route::get('notplacedstudent','CollegeController@notPlacedStudent')->name('notplacedstudent');
-		
+		Route::get('notplacedstudent','CollegeController@notPlacedStudent')->name('notplacedstudent');		
 		// company
 		Route::get('companylist','CollegeController@companyList')->name('companylist');
-
-
 });
