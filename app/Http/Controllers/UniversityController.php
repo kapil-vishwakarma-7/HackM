@@ -17,7 +17,14 @@ class UniversityController extends Controller
     public function index()
     {
         $university = Auth::user()->university;
-        return view('university.index',$university);
+        return view('university.index',['university'=>$university]);
+    }
+
+    public function showCollege()
+    {
+        $university = Auth::user()->university;
+        // dd($university->pendingCollege);
+        return view('university.college_show',['university'=>$university]);
     }
 
     /**
@@ -52,7 +59,7 @@ class UniversityController extends Controller
         // create university
         $university=new University;
         $university->user_id = $user->id;
-        $university->code= $request->code;
+        $university->university_code= $request->code;
         $university->name= $request->name;
         $university->address= $request->address;
         $university->contact= $request->contact;

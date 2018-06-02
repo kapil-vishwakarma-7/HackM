@@ -228,11 +228,10 @@
 			<div class="w3l_form">
 				<h2 class="model_h">Sign Up As</h2>
 				
-				<button class="btn btn-danger btn-block tab1" >University Sign Up</button >
-				<button class="btn btn-danger btn-block tab2" >College Sign Up</button >
-				<button class="btn btn-danger btn-block tab3" value="company_signup">Company Sign Up</button >
-				<button class="btn btn-danger btn-block tab4" value="student_signup">Student Sign Up</button >
-
+				<button class="btn btn-danger btn-block tab1"  style="margin-top: 30%">University Sign Up</button >
+				<button class="btn btn-danger btn-block tab2" style="margin-top: 10%" >College Sign Up</button >
+				<button class="btn btn-danger btn-block tab3" value="company_signup" style="margin-top: 10%">Company Sign Up</button >
+				<button class="btn btn-danger btn-block tab4" value="student_signup" style="margin-top: 10%">Student Sign Up</button >
 				<!-- <img src="images/call-center-1015274_640.jpg"> -->
 			</div>
 			<div class="w3_info"  id="student_signup">
@@ -260,8 +259,8 @@
 							<input type="email" name="email" placeholder="Email" required=""> 
 						</div>
 						<div class="input-group">
-							<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-							<select name="college_name">
+							
+							<select name="college_name" class="form-control">
 								<option value="sistec">SISTec</option>
 							</select>
 						</div>
@@ -301,8 +300,8 @@
 							<input type="text" placeholder="College type" name="college_type" required=""> 
 						</div>
 						<div class="input-group">
-							<span><i class="fa fa-user" aria-hidden="true"></i></span>
-							<select name="university_id">
+						
+							<select name="university_id" class="form-control">
 								<option value="1">RGPV</option>
 								<option value="2">RGPV</option>
 								<option value="3">RGPV</option>
