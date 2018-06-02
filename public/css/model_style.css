@@ -186,9 +186,6 @@ h3.w3ls {
     margin: 10px 0px;
     padding-left: 60px;
 }
-h3.agileits {
-    padding-left: 10px;
-}
 
 i.fa.fa-user {
    font-size: 20px;
@@ -260,12 +257,12 @@ i.fa.fa-facebook {
 }
 @media screen and (max-width: 1366px){
 .container {
-    width: 70%;
+    width: 100%;
    }
 }
 @media screen and (max-width: 1280px){
 	.container {
-    width: 75%;
+    width: 100%;
    }
 }
 @media screen and (max-width: 1080px){
