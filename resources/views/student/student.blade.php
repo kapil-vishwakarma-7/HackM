@@ -16,6 +16,8 @@
 			window.scrollTo(0, 1);
 		}
 	</script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href={{url("css/bootstrap.css")}} rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href={{url("css/jquery.desoslide.css")}}>
 	<link href={{url("css/style.css")}} rel='stylesheet' type='text/css' />
@@ -26,7 +28,42 @@
 <link href={{ url("css/contact.css") }} rel='stylesheet' type='text/css' />
 	<script src={{url("js/jquery-2.2.3.min.js")}}></script>
 
+    <style type="text/css">
+        .user-row {
+    margin-bottom: 14px;
+}
 
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+.toppad
+{margin-top:20px;
+}
+
+    </style>
 </head>
 
 <body>
@@ -139,13 +176,201 @@
 	<!--/banner-->
 	
 
-	@yield('body')
 
-<div class="panel panel-info">
-      <div class="panel-heading">Panel with panel-info class</div>
-      <div class="panel-body">Panel Content</div>
+
+	@yield('body')
+<div class="container">
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Personal Detail</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+<div class="container">
+      <div class="row">
+      
+        <div class="col-xs-12 col-sm-12 toppad" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Sheena Shrestha</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://www.cloudninefertility.com/wp-content/uploads/2017/12/User-dummy.png" class="img-circle img-responsive"> </div>
+                
+                <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
+                  <dl>
+                    <dt>DEPARTMENT:</dt>
+                    <dd>Administrator</dd>
+                    <dt>HIRE DATE</dt>
+                    <dd>11/12/2013</dd>
+                    <dt>DATE OF BIRTH</dt>
+                       <dd>11/12/2013</dd>
+                    <dt>GENDER</dt>
+                    <dd>Male</dd>
+                  </dl>
+                </div>-->
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Enrollment:</td>
+                        <td>Programming</td>
+                      </tr>
+                      <tr>
+                        <td>College Name:</td>
+                        <td>06/23/2013</td>
+                      </tr>
+                      <tr>
+                        <td>Contact</td>
+                        <td>01/24/1988</td>
+                      </tr>
+                   
+                         <tr>
+                             <tr>
+                        <td>Gender</td>
+                        <td>Male</td>
+                      </tr>
+                        <tr>
+                        <td>Home Address</td>
+                        <td>Kathmandu,Nepal</td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:info@support.com">info@support.com</a></td>
+                      </tr>
+                        <td>Phone Number</td>
+                        <td>123-4567-890(
+                        </td>
+                           
+                      </tr>
+                     
+                    </tbody>
+
+                  </table>
+                   
+                </div>
+              </div>
+            </div>
+                 
+            
+          </div>
+        </div>
+      </div>
     </div>
 
+
+
+
+      </div>
+    </div>
+</div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Education detail</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="College*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Start Year*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="End Year*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Degree*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Stream*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Percentage*">
+</div>
+	</div>
+	 <center> 
+                 <button type="button" class="btn btn-primary">Save</button>
+                </center>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Job details</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+          <div class="panel-body">
+
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Profile*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Company/Organization*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Location/Place*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Start Year*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="End Year*">
+</div>
+	
+</div>
+<div class="col-md-12"><center> 
+                 <button type="button" class="btn btn-primary">Save</button>
+                </center></div>
+ 
+	
+</div>
+      </div>
+    </div>
+  </div> 
+</div>
 
 <!-- /footer -->
 

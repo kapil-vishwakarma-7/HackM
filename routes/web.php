@@ -79,5 +79,7 @@ Route::name('dash.admin.')->prefix('dashboard/admin')->group(
 		Route::get('verifyuniversity','AdminController@showVerifyUniversity')->name('verifyuniversity');	
 });
 Route::get('ka',function(){
-return view('student.student');
+	$college = College::all();
+	$university = University::all();
+	return view('student.student',['college'=>$college,'university'=>$university]);
 });
