@@ -12,12 +12,11 @@
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <div class="carousel-caption">
-                        <h3>Create the lifestyle
-                            <span>you desire</span>
+                        <h3>Find Job
+                            <span>you deserve</span>
                         </h3>
-                        <div class="read">
-                            <a href="single.html" class="btn btn-primary read-m">Read More</a>
-                        </div>
+                       
+
                     </div>
                 </div>
                 <div class="carousel-item item2">
@@ -25,31 +24,11 @@
                         <h3>Engaging Purposeful
                             <span>and Creative</span>
                         </h3>
-                        <div class="read">
-                            <a href="single.html" class="btn btn-primary read-m">Read More</a>
-                        </div>
+                       
                     </div>
                 </div>
-                <div class="carousel-item item3">
-                    <div class="carousel-caption">
-                        <h3>Create the lifestyle
-                            <span>you desire</span>
-                        </h3>
-                        <div class="read">
-                            <a href="single.html" class="btn btn-primary read-m">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item item4">
-                    <div class="carousel-caption">
-                        <h3>Engaging Purposeful
-                            <span>and Creative</span>
-                        </h3>
-                        <div class="read">
-                            <a href="single.html" class="btn btn-primary read-m">Read More</a>
-                        </div>
-                    </div>
-                </div>
+                
+                
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -95,125 +74,17 @@
                         </div>
 
                         <h3>
-                            <a href="single.html">Amet consectetur adipisicing </a>
+                            <a href="single.html">About Placement Plortal</a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi ut aliquip exea commodo consequat duis
-                            aute irudre dolor in elit sed uta labore dolore reprehender</p>
-                        <a href="single.html" class="btn btn-primary read-m">Read More</a>
+                        <p style="text-align: justify; color: #000;">This application will perform various tasks for student, college, university and administration. Our application show the placement analytics and it also helps to find job.  This project helps a better student support and work time-saving factor. It show the employment and unemployment ratio. And company can find best employee for their work.  
+</p>
+                        <!-- <a href="single.html" class="btn btn-primary read-m">Read More</a> -->
                     </div>
                     <!--//silder-->
-                    <div class="blog-mid-sec">
-                        <ul id="flexiselDemo2">
-                            <li>
-                                <div class="blog-item">
-                                    <img src="images/5.jpg" alt=" " class="img-fluid" />
-                                    <button type="button" class="btn btn-primary play sec" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                    <div class="floods-text">
-                                        <h3>Lorem ipsum </h3>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="blog-item">
-                                    <img src="images/6.jpg" alt=" " class="img-fluid" />
-                                    <button type="button" class="btn btn-primary play sec" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                    <div class="floods-text">
-                                        <h3>Lorem ipsum </h3>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="blog-item">
-                                    <img src="images/7.jpg" alt=" " class="img-fluid" />
-                                    <button type="button" class="btn btn-primary play sec" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                    <div class="floods-text">
-                                        <h3>Lorem ipsum </h3>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="blog-item">
-                                    <img src="images/8.jpg" alt=" " class="img-fluid" />
-                                    <button type="button" class="btn btn-primary play sec" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                    <div class="floods-text">
-                                        <h3>Lorem ipsum </h3>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                    
 
                     <!--//silder-->
-                    <div class="blog-girds-sec">
-                        <div class="row">
-                            <div class="col-md-6 blog-grid-top">
-                                <div class="b-grid-top">
-                                    <div class="blog_info_left_grid">
-                                        <a href="single.html">
-                                            <img src="images/b2.jpg" class="img-fluid" alt="">
-                                        </a>
-                                    </div>
-                                    <h3>
-                                        <a href="single.html">Amet consectetur </a>
-                                    </h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt aliqua uta enim.</p>
-                                </div>
-                                <ul class="blog-icons">
-                                    <li>
-                                        <a href="#">
-                                            <i class="far fa-clock"></i> 5 Monts</a>
-                                    </li>
-                                    <li class="mx-2">
-                                        <a href="#">
-                                            <i class="far fa-comment"></i> 21</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fas fa-eye"></i> 2000</a>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                            <div class="col-md-6 blog-grid-top">
-                                <div class="b-grid-top">
-                                    <div class="blog_info_left_grid">
-                                        <a href="single.html">
-                                            <img src="images/b3.jpg" class="img-fluid" alt="">
-                                        </a>
-                                    </div>
-                                    <h3>
-                                        <a href="single.html">Amet adipisicing </a>
-                                    </h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt aliqua uta enim.</p>
-
-                                </div>
-                                <ul class="blog-icons">
-                                    <li>
-                                        <a href="#">
-                                            <i class="far fa-clock"></i> 5 Monts</a>
-                                    </li>
-                                    <li class="mx-2">
-                                        <a href="#">
-                                            <i class="far fa-comment"></i> 21</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fas fa-eye"></i> 2000</a>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                
                 </div>
                 <!--//left-->
                 <!--right-->
@@ -224,7 +95,6 @@
                         </div>
                         <div class="tech-btm">
                             <h4>Sign up to our newsletter</h4>
-                            <p>Pellentesque dui, non felis. Maecenas male </p>
                             <form action="#" method="post">
                                 <input type="email" placeholder="Email" required="">
                                 <input type="submit" value="Subscribe">
@@ -259,116 +129,7 @@
 
                             </ul>
                         </div>
-                        <div class="tech-btm">
-                            <h4>Recent Posts</h4>
-                            
-                            <div class="blog-grids row mb-3">
-                                <div class="col-md-5 blog-grid-left">
-                                    <a href="single.html">
-                                        <img src="images/1.jpg" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-md-7 blog-grid-right">
-
-                                    <h5>
-                                        <a href="single.html">Pellentesque dui, non felis. Maecenas male non felis </a>
-                                    </h5>
-                                    <div class="sub-meta">
-                                        <span>
-                                            <i class="far fa-clock"></i> 20 Jan, 2018</span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="blog-grids row mb-3">
-                                <div class="col-md-5 blog-grid-left">
-                                    <a href="single.html">
-                                        <img src="images/5.jpg" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-md-7 blog-grid-right">
-
-                                    <h5>
-                                        <a href="single.html">Pellentesque dui, non felis. Maecenas male non felis </a>
-                                    </h5>
-                                    <div class="sub-meta">
-                                        <span>
-                                            <i class="far fa-clock"></i> 20 Jan, 2018</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <div class="blog-grids row mb-3">
-                                <div class="col-md-5 blog-grid-left">
-                                    <a href="single.html">
-                                        <img src="images/3.jpg" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-md-7 blog-grid-right">
-                                    <h5>
-                                        <a href="single.html">Pellentesque dui, non felis. Maecenas male non felis </a>
-                                    </h5>
-                                    <div class="sub-meta">
-                                        <span>
-                                            <i class="far fa-clock"></i> 20 Feb, 2018</span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="blog-grids row mb-3">
-                                <div class="col-md-5 blog-grid-left">
-                                    <a href="single.html">
-                                        <img src="images/2.jpg" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-md-7 blog-grid-right">
-
-                                    <h5>
-                                        <a href="single.html">Pellentesque dui, non felis. Maecenas male non felis </a>
-                                    </h5>
-                                    <div class="sub-meta">
-                                        <span>
-                                            <i class="far fa-clock"></i> 20 Jan, 2018</span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="blog-grids row mb-3">
-                                <div class="col-md-5 blog-grid-left">
-                                    <a href="single.html">
-                                        <img src="images/4.jpg" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-md-7 blog-grid-right">
-
-                                    <h5>
-                                        <a href="single.html">Pellentesque dui, non felis. Maecenas male non felis </a>
-                                    </h5>
-                                    <div class="sub-meta">
-                                        <span>
-                                            <i class="far fa-clock"></i> 20 Jan, 2018</span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="blog-grids row mb-3">
-                                <div class="col-md-5 blog-grid-left">
-                                    <a href="single.html">
-                                        <img src="images/6.jpg" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-md-7 blog-grid-right">
-                                    <h5>
-                                        <a href="single.html">Pellentesque dui, non felis. Maecenas male non felis </a>
-                                    </h5>
-                                    <div class="sub-meta">
-                                        <span>
-                                            <i class="far fa-clock"></i> 20 Feb, 2018</span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
+                        
                     </div>
 
                 </aside>

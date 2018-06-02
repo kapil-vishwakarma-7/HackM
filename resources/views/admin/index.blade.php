@@ -21,22 +21,22 @@
                                     <div>                                    
                                         <div class="widget-title">Total Uiversity</div>                                                                        
                                         
-                                        <div class="widget-int">3,548</div>
+                                        <div class="widget-int">54</div>
                                     </div>
                                     <div>                                    
                                         <div class="widget-title">Total</div>
                                         <div class="widget-subtitle">Colleges</div>
-                                        <div class="widget-int">1,695</div>
+                                        <div class="widget-int">300+</div>
                                     </div>
                                     <div>                                    
                                         <div class="widget-title">Total Students</div>
                                         <div class="widget-subtitle">Registered</div>
-                                        <div class="widget-int">1,977</div>
+                                        <div class="widget-int">1000+</div>
                                     </div>
                                      <div>                                    
                                         <div class="widget-title">Total Company</div>
                                         <div class="widget-subtitle">Registered</div>
-                                        <div class="widget-int">1,977</div>
+                                        <div class="widget-int">100+</div>
                                     </div>
                                 </div>                            
                                 <div class="widget-controls">                                

@@ -1,7 +1,7 @@
-@extends('layouts.university')
+@extends('layouts.admin')
 @section('section')
 <div class="container">
- <h1>Verified Colleges</h1> 
+ <h1>Verified University</h1> 
 <div class="panel-body">
 
  <table id="customers2" class="table datatable">
@@ -15,9 +15,9 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($university->college as $clg)
+                                            @foreach($university as $clg)
                                               <tr>
-                                                <td >{{ $clg->college }}</td>
+                                                <td >{{ $clg->university_code }}</td>
                                                 <td>{{ $clg->name }}</td>
                                                 <td>{{ $clg->contact }}</td>
                                                 <td>{{ $clg->address }}</td>

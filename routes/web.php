@@ -18,10 +18,21 @@ Route::get('/',function(){
 	$university = University::all();
 	return view('welcome',['college'=>$college,'university'=>$university]);
 });
-
-Route::view('contact','contact');
-Route::view('about','about');
-Route::view('placement','placement');
+Route::get('contact',function(){
+	$college = College::all();
+	$university = University::all();
+	return view('contact',['college'=>$college,'university'=>$university]);
+});
+Route::get('about',function(){
+	$college = College::all();
+	$university = University::all();
+	return view('about',['college'=>$college,'university'=>$university]);
+});
+Route::get('placement',function(){
+	$college = College::all();
+	$university = University::all();
+	return view('placement',['college'=>$college,'university'=>$university]);
+});
 
 
 
@@ -36,6 +47,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('jare','UniversityController@verifyCollege');
+Route::get('a','AdminController@verifyUniversity');
 
 
 Route::name('dash.university.')->prefix('dashboard/university')->group(
@@ -44,8 +56,6 @@ Route::name('dash.university.')->prefix('dashboard/university')->group(
 		Route::get('/','UniversityController@index');
 		Route::get('pendingcollege','UniversityController@showPendingCollege')->name('pendingcollege');
 		Route::get('verifycollege','UniversityController@showVerifyCollege')->name('verifycollege');
-		
-
 });
 
 
@@ -55,15 +65,18 @@ Route::name('dash.college.')->prefix('dashboard/college')->group(
 		Route::get('/','CollegeController@index');
 		//student
 		Route::get('approve','CollegeController@approve')->name('approve');
-		Route::get('studentlist','CollegeController@studentList')->name('studentlist');
-		
+		Route::get('studentlist','CollegeController@studentList')->name('studentlist');		
 		Route::get('placedstudent','CollegeController@placedStudent')->name('placedstudent');
-		Route::get('notplacedstudent','CollegeController@notPlacedStudent')->name('notplacedstudent');
-		
+		Route::get('notplacedstudent','CollegeController@notPlacedStudent')->name('notplacedstudent');		
 		// company
 		Route::get('companylist','CollegeController@companyList')->name('companylist');
+});
 
-
+Route::name('dash.admin.')->prefix('dashboard/admin')->group(
+	function(){
+		Route::get('/','AdminController@index');
+		Route::get('pendinguniversity','AdminController@showPendingUniversity')->name('pendinguniversity');
+		Route::get('verifyuniversity','AdminController@showVerifyUniversity')->name('verifyuniversity');	
 });
 Route::get('ka',function(){
 return view('student.student');

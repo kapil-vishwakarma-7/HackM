@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Admin;
+use App\University;
 class AdminController extends Controller
 {
     /**
@@ -82,5 +83,25 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+ public function verifyUniversity(Request $r){
+        $college = University::find($r->id);
+//        dd($university);
+        $college->pending = 0;
+        $college->save();
+        return response()->json($r,200);
+    }
+
+    public function showPendingUniversity()
+    {
+        $university = University::where('pending','=',1)->get();
+        return view('admin.pending_university_show',['university'=>$university]);
+    }
+    public function showVerifyUniversity()
+    {
+        $university = University::where('pending','=',0)->get();
+        // dd($university->pendingCollege);
+        return view('admin.verify_university_show',['university'=>$university]);
     }
 }

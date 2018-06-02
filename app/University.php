@@ -14,8 +14,8 @@ class University extends Model
     public function college(){
     	return $this->hasMany('App\College','university_id','university_code')->where('pending','=',0);
     }
+    // public function (){  }
     public function user(){
     	return $this->belongsTo('App\User');
     }
-
 }

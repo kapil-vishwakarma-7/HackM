@@ -249,11 +249,10 @@
 			<div class="w3l_form">
 				<h2 class="model_h">Sign Up As</h2>
 				
-				<button class="btn btn-danger btn-block tab1" >University Sign Up</button >
-				<button class="btn btn-danger btn-block tab2" >College Sign Up</button >
-				<button class="btn btn-danger btn-block tab3" value="company_signup">Company Sign Up</button >
-				<button class="btn btn-danger btn-block tab4" value="student_signup">Student Sign Up</button >
-
+				<button class="btn btn-danger btn-block tab1"  style="margin-top: 30%">University Sign Up</button >
+				<button class="btn btn-danger btn-block tab2" style="margin-top: 10%" >College Sign Up</button >
+				<button class="btn btn-danger btn-block tab3" value="company_signup" style="margin-top: 10%">Company Sign Up</button >
+				<button class="btn btn-danger btn-block tab4" value="student_signup" style="margin-top: 10%">Student Sign Up</button >
 				<!-- <img src="images/call-center-1015274_640.jpg"> -->
 			</div>
 			<div class="w3_info"  id="student_signup">
@@ -287,7 +286,6 @@
 								<option value="{{$a->college_code}}">{{$a->name}}</option>
 
 								@endforeach
-
 							</select>
 						</div>
 						<div class="input-group">
