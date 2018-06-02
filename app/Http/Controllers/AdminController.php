@@ -83,4 +83,19 @@ class AdminController extends Controller
     {
         //
     }
+
+
+
+    public function showPendingUniversity()
+    {
+        $university = University::all();
+
+        return view('admin.pending_university_show',['university'=>$university]);
+    }
+    public function showVerifyUniversity()
+    {
+         $university = University::all();
+        // dd($university->pendingCollege);
+        return view('admin.verify_verify_show',['university'=>$university]);
+    }
 }
