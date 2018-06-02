@@ -101,4 +101,22 @@ class CollegeController extends Controller
     {
         //
     }
+
+    public function approve(){
+        //
+        return view('college.student_approval'); 
+    }
+    public function studentList(){
+        return view('college.student_list');
+    }
+    public function companyList(){
+        return view('college.company_list');
+    }
+    public function placedStudent(){
+        return view('college.placed_student');
+    }
+    public function notPlacedStudent(){
+        return view('college.not_placed');
+    }
+
 }
