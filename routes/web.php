@@ -1,6 +1,7 @@
 <?php
 use App\College;
 use App\University;
+use App\Placement;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,7 +32,12 @@ Route::get('about',function(){
 Route::get('placement',function(){
 	$college = College::all();
 	$university = University::all();
-	return view('placement',['college'=>$college,'university'=>$university]);
+	$year = 2012;
+	$bardata = Placement::where('year',$year)->select('college_id', DB::raw('count(*) as total'))
+                 ->groupBy('college_id')->orderBy('total','desc')
+                 ->get();;
+
+	return view('placement',['bardata'=>$bardata,'college'=>$college,'university'=>$university]);
 });
 
 
@@ -79,6 +85,12 @@ Route::name('dash.admin.')->prefix('dashboard/admin')->group(
 		Route::get('verifyuniversity','AdminController@showVerifyUniversity')->name('verifyuniversity');	
 });
 
+Route::get('createuser',function(){
+	$user = factory(App\Company::class,100)->create();
+});
+
+
+
 Route::get('ka',function(){
 	$college = College::all();
 	$university = University::all();
@@ -90,4 +102,3 @@ Route::name('dash.student.')->prefix('dashboard/student')->group(
 		Route::get('/','StudentController@index');
 		
 });
-
