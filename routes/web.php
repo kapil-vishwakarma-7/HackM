@@ -65,3 +65,6 @@ Route::name('dash.college.')->prefix('dashboard/college')->group(
 
 
 });
+Route::get('ka',function(){
+return view('student.student');
+});

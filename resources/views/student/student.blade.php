@@ -141,7 +141,10 @@
 
 	@yield('body')
 
-
+<div class="panel panel-info">
+      <div class="panel-heading">Panel with panel-info class</div>
+      <div class="panel-body">Panel Content</div>
+    </div>
 
 
 <!-- /footer -->
@@ -470,113 +473,7 @@
 
 
 
-<!-- <div class="text-center">
-    <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Launch Modal Login Form</a>
-</div> -->
-	<!---->
-	<!-- js -->
-	<!-- //js -->
-	<!-- desoslide-JavaScript -->
-	<script src={{url("js/jquery.desoslide.js")}}></script>
-	<script>
-		$('#demo1_thumbs').desoSlide({
-			main: {
-				container: '#demo1_main_image',
-				cssClass: 'img-responsive'
-			},
-			effect: 'sideFade',
-			caption: true
-		});
-	</script>
 
-	<!-- requried-jsfiles-for owl -->
-	<script type="text/javascript">
-		$(document).ready(function(){
-
-			$(".tab1").click(function(){
-				$("#college_signup").hide();
-				$("#student_signup").hide();
-				$("#company_signup").hide();
-			$("#university_signup").show();
-
-			})
-			$(".tab2").click(function(){
-			
-			$("#university_signup").hide();
-				$("#student_signup").hide();
-				$("#company_signup").hide();
-			$("#college_signup").show();	
-			})
-			$(".tab3").click(function(){
-			$("#college_signup").hide();
-				$("#student_signup").hide();
-				$("#university_signup").hide();
-			$("#company_signup").show();
-				
-			})
-			$(".tab4").click(function(){
-			$("#college_signup").hide();
-				$("#university_signup").hide();
-				$("#company_signup").hide();
-			$("#student_signup").show();
-				
-			})
-		})
-	</script>
-	<script>
-		$(window).load(function () {
-			$("#flexiselDemo1").flexisel({
-				visibleItems: 3,
-				animationSpeed: 1000,
-				autoPlay: true,
-				autoPlaySpeed: 3000,
-				pauseOnHover: true,
-				enableResponsiveBreakpoints: true,
-				responsiveBreakpoints: {
-					portrait: {
-						changePoint: 480,
-						visibleItems: 1
-					},
-					landscape: {
-						changePoint: 640,
-						visibleItems: 2
-					},
-					tablet: {
-						changePoint: 768,
-						visibleItems: 3
-					}
-				}
-			});
-
-		});
-	</script>
-	<script>
-		$(window).load(function () {
-			$("#flexiselDemo2").flexisel({
-				visibleItems: 3,
-				animationSpeed: 1000,
-				autoPlay: true,
-				autoPlaySpeed: 3000,
-				pauseOnHover: true,
-				enableResponsiveBreakpoints: true,
-				responsiveBreakpoints: {
-					portrait: {
-						changePoint: 480,
-						visibleItems: 1
-					},
-					landscape: {
-						changePoint: 640,
-						visibleItems: 2
-					},
-					tablet: {
-						changePoint: 768,
-						visibleItems: 3
-					}
-				}
-			});
-
-		});
-	</script>
 	<script src={{url("js/jquery.flexisel.js")}}></script>
 	<!-- //password-script -->
 	<!--/ start-smoth-scrolling -->
