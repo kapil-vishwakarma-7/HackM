@@ -16,9 +16,10 @@
 			window.scrollTo(0, 1);
 		}
 	</script>
-	  
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href={{url("css/bootstrap.css")}} rel='stylesheet' type='text/css' />
-	<!-- <link rel="stylesheet" href={{url("css/jquery.desoslide.css")}}> -->
+	<link rel="stylesheet" href={{url("css/jquery.desoslide.css")}}>
 	<link href={{url("css/style.css")}} rel='stylesheet' type='text/css' />
 	<link href={{url("css/model_style.css")}} rel='stylesheet' type='text/css' />
 	<link href={{url("css/fontawesome-all.css")}} rel="stylesheet">
@@ -27,7 +28,42 @@
 <link href={{ url("css/contact.css") }} rel='stylesheet' type='text/css' />
 	<script src={{url("js/jquery-2.2.3.min.js")}}></script>
 
+    <style type="text/css">
+        .user-row {
+    margin-bottom: 14px;
+}
 
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+.toppad
+{margin-top:20px;
+}
+
+    </style>
 </head>
 
 <body>
@@ -36,7 +72,7 @@
 	<header>
 		<div class="top-bar_sub_w3layouts container-fluid">
 			<div class="row">
-				<div class="col-md-3 logo text-left">
+				<div class="col-md-4 logo text-left">
 					<a class="navbar-brand" href="{{ url('/') }}">
 						<i class="fab fa-linode"></i> Placement Portal</a>
 				</div>
@@ -140,10 +176,201 @@
 	<!--/banner-->
 	
 
+
+
 	@yield('body')
+<div class="container">
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Personal Detail</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+<div class="container">
+      <div class="row">
+      
+        <div class="col-xs-12 col-sm-12 toppad" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Sheena Shrestha</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://www.cloudninefertility.com/wp-content/uploads/2017/12/User-dummy.png" class="img-circle img-responsive"> </div>
+                
+                <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
+                  <dl>
+                    <dt>DEPARTMENT:</dt>
+                    <dd>Administrator</dd>
+                    <dt>HIRE DATE</dt>
+                    <dd>11/12/2013</dd>
+                    <dt>DATE OF BIRTH</dt>
+                       <dd>11/12/2013</dd>
+                    <dt>GENDER</dt>
+                    <dd>Male</dd>
+                  </dl>
+                </div>-->
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Enrollment:</td>
+                        <td>Programming</td>
+                      </tr>
+                      <tr>
+                        <td>College Name:</td>
+                        <td>06/23/2013</td>
+                      </tr>
+                      <tr>
+                        <td>Contact</td>
+                        <td>01/24/1988</td>
+                      </tr>
+                   
+                         <tr>
+                             <tr>
+                        <td>Gender</td>
+                        <td>Male</td>
+                      </tr>
+                        <tr>
+                        <td>Home Address</td>
+                        <td>Kathmandu,Nepal</td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:info@support.com">info@support.com</a></td>
+                      </tr>
+                        <td>Phone Number</td>
+                        <td>123-4567-890(
+                        </td>
+                           
+                      </tr>
+                     
+                    </tbody>
+
+                  </table>
+                   
+                </div>
+              </div>
+            </div>
+                 
+            
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
+
+      </div>
+    </div>
+</div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Education detail</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="College*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Start Year*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="End Year*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Degree*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Stream*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Percentage*">
+</div>
+	</div>
+	 <center> 
+                 <button type="button" class="btn btn-primary">Save</button>
+                </center>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Job details</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+          <div class="panel-body">
+
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Profile*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Company/Organization*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Location/Place*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="Start Year*">
+</div>
+	
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+  <input type="text" class="form-control" placeholder="End Year*">
+</div>
+	
+</div>
+<div class="col-md-12"><center> 
+                 <button type="button" class="btn btn-primary">Save</button>
+                </center></div>
+ 
+	
+</div>
+      </div>
+    </div>
+  </div> 
+</div>
 
 <!-- /footer -->
 
@@ -250,10 +477,11 @@
 			<div class="w3l_form">
 				<h2 class="model_h">Sign Up As</h2>
 				
-				<button class="btn btn-danger btn-block tab1"  style="margin-top: 30%">University Sign Up</button >
-				<button class="btn btn-danger btn-block tab2" style="margin-top: 10%" >College Sign Up</button >
-				<button class="btn btn-danger btn-block tab3" value="company_signup" style="margin-top: 10%">Company Sign Up</button >
-				<button class="btn btn-danger btn-block tab4" value="student_signup" style="margin-top: 10%">Student Sign Up</button >
+				<button class="btn btn-danger btn-block tab1" >University Sign Up</button >
+				<button class="btn btn-danger btn-block tab2" >College Sign Up</button >
+				<button class="btn btn-danger btn-block tab3" value="company_signup">Company Sign Up</button >
+				<button class="btn btn-danger btn-block tab4" value="student_signup">Student Sign Up</button >
+
 				<!-- <img src="images/call-center-1015274_640.jpg"> -->
 			</div>
 			<div class="w3_info"  id="student_signup">
@@ -287,6 +515,7 @@
 								<option value="{{$a->college_code}}">{{$a->name}}</option>
 
 								@endforeach
+
 							</select>
 						</div>
 						<div class="input-group">
@@ -469,113 +698,7 @@
 
 
 
-<!-- <div class="text-center">
-    <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Launch Modal Login Form</a>
-</div> -->
-	<!---->
-	<!-- js -->
-	<!-- //js -->
-	<!-- desoslide-JavaScript -->
-	<script src={{url("js/jquery.desoslide.js")}}></script>
-	<script>
-		$('#demo1_thumbs').desoSlide({
-			main: {
-				container: '#demo1_main_image',
-				cssClass: 'img-responsive'
-			},
-			effect: 'sideFade',
-			caption: true
-		});
-	</script>
 
-	<!-- requried-jsfiles-for owl -->
-	<script type="text/javascript">
-		$(document).ready(function(){
-
-			$(".tab1").click(function(){
-				$("#college_signup").hide();
-				$("#student_signup").hide();
-				$("#company_signup").hide();
-			$("#university_signup").show();
-
-			})
-			$(".tab2").click(function(){
-			
-			$("#university_signup").hide();
-				$("#student_signup").hide();
-				$("#company_signup").hide();
-			$("#college_signup").show();	
-			})
-			$(".tab3").click(function(){
-			$("#college_signup").hide();
-				$("#student_signup").hide();
-				$("#university_signup").hide();
-			$("#company_signup").show();
-				
-			})
-			$(".tab4").click(function(){
-			$("#college_signup").hide();
-				$("#university_signup").hide();
-				$("#company_signup").hide();
-			$("#student_signup").show();
-				
-			})
-		})
-	</script>
-	<script>
-		$(window).load(function () {
-			$("#flexiselDemo1").flexisel({
-				visibleItems: 3,
-				animationSpeed: 1000,
-				autoPlay: true,
-				autoPlaySpeed: 3000,
-				pauseOnHover: true,
-				enableResponsiveBreakpoints: true,
-				responsiveBreakpoints: {
-					portrait: {
-						changePoint: 480,
-						visibleItems: 1
-					},
-					landscape: {
-						changePoint: 640,
-						visibleItems: 2
-					},
-					tablet: {
-						changePoint: 768,
-						visibleItems: 3
-					}
-				}
-			});
-
-		});
-	</script>
-	<script>
-		$(window).load(function () {
-			$("#flexiselDemo2").flexisel({
-				visibleItems: 3,
-				animationSpeed: 1000,
-				autoPlay: true,
-				autoPlaySpeed: 3000,
-				pauseOnHover: true,
-				enableResponsiveBreakpoints: true,
-				responsiveBreakpoints: {
-					portrait: {
-						changePoint: 480,
-						visibleItems: 1
-					},
-					landscape: {
-						changePoint: 640,
-						visibleItems: 2
-					},
-					tablet: {
-						changePoint: 768,
-						visibleItems: 3
-					}
-				}
-			});
-
-		});
-	</script>
 	<script src={{url("js/jquery.flexisel.js")}}></script>
 	<!-- //password-script -->
 	<!--/ start-smoth-scrolling -->

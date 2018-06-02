@@ -84,10 +84,6 @@ Route::name('dash.admin.')->prefix('dashboard/admin')->group(
 		Route::get('pendinguniversity','AdminController@showPendingUniversity')->name('pendinguniversity');
 		Route::get('verifyuniversity','AdminController@showVerifyUniversity')->name('verifyuniversity');	
 });
-
-
-
-
 Route::get('createuser',function(){
 	$user = factory(App\Company::class,100)->create();
 });
@@ -96,3 +92,13 @@ Route::get('createuser',function(){
 
 
 
+Route::get('ka',function(){
+	$college = College::all();
+	$university = University::all();
+	return view('student.student',['college'=>$college,'university'=>$university]);
+});
+Route::name('dash.student.')->prefix('dashboard/student')->group(
+	function(){
+		Route::get('/','StudentController@index');
+		
+});
