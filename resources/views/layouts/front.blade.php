@@ -17,7 +17,7 @@
 		}
 	</script>
 	<link href={{url("css/bootstrap.css")}} rel='stylesheet' type='text/css' />
-	<link rel="stylesheet" href={{url("css/jquery.desoslide.css")}}>
+	<!-- <link rel="stylesheet" href={{url("css/jquery.desoslide.css")}}> -->
 	<link href={{url("css/style.css")}} rel='stylesheet' type='text/css' />
 	<link href={{url("css/model_style.css")}} rel='stylesheet' type='text/css' />
 	<link href={{url("css/fontawesome-all.css")}} rel="stylesheet">
@@ -35,7 +35,7 @@
 	<header>
 		<div class="top-bar_sub_w3layouts container-fluid">
 			<div class="row">
-				<div class="col-md-4 logo text-left">
+				<div class="col-md-3 logo text-left">
 					<a class="navbar-brand" href="{{ url('/') }}">
 						<i class="fab fa-linode"></i> Placement Portal</a>
 				</div>
