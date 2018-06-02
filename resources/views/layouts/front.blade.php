@@ -24,6 +24,9 @@
 	<link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
 	    rel="stylesheet">
 <link href={{ url("css/contact.css") }} rel='stylesheet' type='text/css' />
+	<script src={{url("js/jquery-2.2.3.min.js")}}></script>
+
+
 </head>
 
 <body>
@@ -280,7 +283,11 @@
 						<div class="input-group">
 							<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
 							<select name="college_name">
-								<option value="sistec">SISTec</option>
+								@foreach($college as $a)
+								<option value="{{$a->college_code}}">{{$a->name}}</option>
+
+								@endforeach
+
 							</select>
 						</div>
 						<div class="input-group">
@@ -321,10 +328,11 @@
 						<div class="input-group">
 							<span><i class="fa fa-user" aria-hidden="true"></i></span>
 							<select name="university_id">
-								<option value="1">RGPV</option>
-								<option value="2">RGPV</option>
-								<option value="3">RGPV</option>
-								<option value="4">RGPV</option>
+								@foreach($university as $e)
+
+								<option value="{{$e->university_code}}">{{$e->name}}</option>
+
+								@endforeach
 							</select>
 						</div>
 						<div class="input-group">
@@ -467,7 +475,6 @@
 </div> -->
 	<!---->
 	<!-- js -->
-	<script src={{url("js/jquery-2.2.3.min.js")}}></script>
 	<!-- //js -->
 	<!-- desoslide-JavaScript -->
 	<script src={{url("js/jquery.desoslide.js")}}></script>

@@ -35,12 +35,17 @@ Route::resource('student','StudentController');
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+Route::get('jare','UniversityController@verifyCollege');
+
 
 Route::name('dash.university.')->prefix('dashboard/university')->group(
 	function(){
 		
 		Route::get('/','UniversityController@index');
+		Route::get('pendingcollege','UniversityController@showPendingCollege')->name('pendingcollege');
+		Route::get('verifycollege','UniversityController@showVerifyCollege')->name('verifycollege');
 		
+
 });
 
 
