@@ -36,6 +36,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('jare','UniversityController@verifyCollege');
+Route::get('verify','AdminController@verifyUniversity');
 
 
 Route::name('dash.university.')->prefix('dashboard/university')->group(
@@ -63,6 +64,6 @@ Route::name('dash.college.')->prefix('dashboard/college')->group(
 Route::name('dash.admin.')->prefix('dashboard/admin')->group(
 	function(){
 		Route::get('/','AdminController@index');
-		Route::get('pendinguniversity','AdminController@showPendingUniversity')->name('pendingcollege');
-		Route::get('verifyuniversity','AdminController@showVerifyUniversity')->name('verifycollege');	
+		Route::get('pendinguniversity','AdminController@showPendingUniversity')->name('pendinguniversity');
+		Route::get('verifyuniversity','AdminController@showVerifyUniversity')->name('verifyuniversity');	
 });

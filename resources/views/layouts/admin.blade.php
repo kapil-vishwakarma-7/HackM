@@ -32,13 +32,13 @@
                     </li>
                     <li class="xn-title">Navigation</li>
                     <li class="active">
-                        <a href="index.html"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
+                        <a href="{{ route('dash.admin.') }}"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
                     </li>                    
                     <li class="xn-openable">
-                        <a href="#"><span class="fa fa-university"></span> <span class="xn-text">University</span></a>
+                        <a href="{{ route('dash.admin.') }}"><span class="fa fa-university"></span> <span class="xn-text">University</span></a>
                         <ul>
-                            <li><a href="pages-gallery.html"><span class="fa fa-arrow-right"></span> Verify University</a></li>
-                            <li><a href="pages-profile.html"><span class="fa fa-arrow-right"></span> Approved University</a></li>
+                            <li><a href="{{ route('dash.admin.pendinguniversity') }}"><span class="fa fa-arrow-right"></span> Verify University</a></li>
+                            <li><a href="{{ route('dash.admin.verifyuniversity') }}"><span class="fa fa-arrow-right"></span> Approved University</a></li>
                              <li><a href="pages-profile.html"><span class="fa fa-arrow-right"></span> Seat allotment</a></li>
                              <li><a href="pages-profile.html"><span class="fa fa-arrow-right"></span> Assign course</a></li>
                              

@@ -26,6 +26,7 @@ class UniversityController extends Controller
         $university = Auth::user()->university;
         // dd($university->pendingCollege);
         return view('university.college_show',['university'=>$university]);
+    }
     public function showPendingCollege()
     {
         $university = Auth::user()->university;

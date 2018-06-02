@@ -53,7 +53,7 @@ class LoginController extends Controller
             return redirect('/company');
         }
         if($user->role == 'adm') {
-            return redirect('/adm');
+            return redirect('/dashboard/admin/');
         }
     }
 }
