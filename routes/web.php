@@ -1,3 +1,4 @@
+
 <?php
 use App\College;
 use App\University;
@@ -34,8 +35,10 @@ Route::get('placement',function(){
 	$university = University::all();
 	$year = 2012;
 	$bardata = Placement::where('year',$year)->select('college_id', DB::raw('count(*) as total'))
-                 ->groupBy('college_id')->orderBy('total','desc')
-                 ->get();;
+                 ->groupBy('college_id')->orderBy('total','desc')->take(12)
+                 ->get();
+
+                 // dd($bardata[0]->college->name);
 
 	return view('placement',['bardata'=>$bardata,'college'=>$college,'university'=>$university]);
 });

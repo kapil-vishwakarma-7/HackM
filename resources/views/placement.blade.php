@@ -56,7 +56,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2", // "light1", "light2", "dark1", "dark2"
 	title:{
-		text: "Top five Universities"
+		text: "Top College Placements"
 	},
 	axisY: {
 		title: "Placement"
@@ -67,12 +67,10 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		legendMarkerColor: "grey",
 		legendText: "Colleges",
 		dataPoints: [
-						{ y: 300, label: "RGPV" },
-			{ y: 100,  label: "BU" },
-			{ y: 123,  label: "MCU" },
-			{ y: 301,  label: "BHU" },
-			{ y: 2,  label: "IPS" },
-				
+			@foreach($bardata as $e)
+						{ y: {{$e->total}}, label: "{{$e->college->name}}" },
+			
+			@endforeach
 		]
 	}]
 });
