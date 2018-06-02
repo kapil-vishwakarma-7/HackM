@@ -67,3 +67,10 @@ Route::name('dash.admin.')->prefix('dashboard/admin')->group(
 		Route::get('pendinguniversity','AdminController@showPendingUniversity')->name('pendinguniversity');
 		Route::get('verifyuniversity','AdminController@showVerifyUniversity')->name('verifyuniversity');	
 });
+
+
+
+
+Route::get('createuser',function(){
+	$user = factory(App\College::class,10)->create();
+});
