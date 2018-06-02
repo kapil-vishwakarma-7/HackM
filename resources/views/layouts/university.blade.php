@@ -35,10 +35,10 @@
                         <a href="index.html"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
                     </li>                    
                     <li class="xn-openable">
-                        <a href="#"><span class="fa fa-university"></span> <span class="xn-text">University</span></a>
+                        <a href="#"><span class="fa fa-university"></span> <span class="xn-text">College</span></a>
                         <ul>
-                            <li><a href="pages-gallery.html"><span class="fa fa-arrow-right"></span> Verify University</a></li>
-                            <li><a href="pages-profile.html"><span class="fa fa-arrow-right"></span> Approved University</a></li>
+                            <li><a href="{{ route('dash.university.pendingcollege') }}"><span class="fa fa-arrow-right"></span> Pending College</a></li>
+                            <li><a href="{{ route('dash.university.verifycollege') }}"><span class="fa fa-arrow-right"></span> Approved College</a></li>
                              <li><a href="pages-profile.html"><span class="fa fa-arrow-right"></span> Seat allotment</a></li>
                              <li><a href="pages-profile.html"><span class="fa fa-arrow-right"></span> Assign course</a></li>
                              
