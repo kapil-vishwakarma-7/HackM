@@ -78,3 +78,8 @@ Route::name('dash.admin.')->prefix('dashboard/admin')->group(
 		Route::get('pendinguniversity','AdminController@showPendingUniversity')->name('pendinguniversity');
 		Route::get('verifyuniversity','AdminController@showVerifyUniversity')->name('verifyuniversity');	
 });
+Route::name('dash.student.')->prefix('dashboard/student')->group(
+	function(){
+		Route::get('/','StudentController@index');
+		
+});
