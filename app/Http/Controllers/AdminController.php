@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Admin;
 use App\University;
+use App\College;
+use App\Student;
+use App\Company;
+
 class AdminController extends Controller
 {
     /**
@@ -14,7 +18,12 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $university = University::all();
+        $college = College::all();
+        $student = Student::all();
+        $company = Company::all();
+
+        return view('admin.index',['university'=>$university,'college'=>$college,'student'=>$student,'company'=>$company]);
         
     }
 

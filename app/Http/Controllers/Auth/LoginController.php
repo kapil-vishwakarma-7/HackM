@@ -44,7 +44,7 @@ class LoginController extends Controller
             return redirect('/college');
         }
         if($user->role == 'stu') {
-            return redirect('/stu');
+            return redirect('/dashboard/student/');
         }
         if($user->role == 'uni') {
             return redirect('/university');
