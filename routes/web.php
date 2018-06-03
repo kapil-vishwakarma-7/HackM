@@ -84,6 +84,8 @@ Route::resource('university','UniversityController');
 Route::resource('college','CollegeController');
 Route::resource('company','CompanyController');
 Route::resource('student','StudentController');
+Route::post('/jobdetail/{id}','StudentController@jobDetail');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -127,6 +129,7 @@ Route::get('createuser',function(){
 
 
 
+
 Route::get('ka',function(){
 	$college = College::all();
 	$university = University::all();
@@ -136,5 +139,6 @@ Route::get('ka',function(){
 Route::name('dash.student.')->prefix('dashboard/student')->group(
 	function(){
 		Route::get('/','StudentController@index');
+
 		
 });

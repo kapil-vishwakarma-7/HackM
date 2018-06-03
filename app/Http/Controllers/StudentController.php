@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Student;
 use App\User;
+use App\College;
+use App\University;
 use Auth;
 
 class StudentController extends Controller
@@ -16,8 +18,12 @@ class StudentController extends Controller
      */
     public function index()
     {
-       $student = Auth::user()->student;
-        return view('student.index',['student'=>$student]);
+        $student = Auth::user()->student;
+        $college = College::all();
+        $college = Student::all();
+        $university = University::all();
+
+        return view('student.student',['college'=>$college,'student'=>$student,'university'=>$university]);
     }
 
     /**
@@ -89,8 +95,28 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $student=Student::find($id);
+        $student->validity_start=$request->validity_start;
+        $student->validity_end=$request->validity_end;
+        $student->degree=$request->degree;
+        $student->course=$request->course;
+        $student->percentage=$request->percentage;
+        $student->save();
+        return response()->json("done",200);
     }
+    
+    public function jobDetail(Request $request,$id){
+        $student=Student::find($id);
+        $student->job=$request->job;
+        $student->company=$request->company;
+        $student->location=$request->location;
+        $student->company_join=$request->company_join;
+        $student->company_end=$request->company_end;
+        $student->save();
+        return response()->json("done",200);
+        
+    }
+
 
     /**
      * Remove the specified resource from storage.

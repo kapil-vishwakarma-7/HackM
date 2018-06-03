@@ -21,22 +21,24 @@
                                     <div>                                    
                                         <div class="widget-title">Total Uiversity</div>                                                                        
                                         
-                                        <div class="widget-int">54</div>
+                                        <div class="widget-int">
+                                            {{ $university->count() }}
+                                        </div>
                                     </div>
                                     <div>                                    
                                         <div class="widget-title">Total</div>
                                         <div class="widget-subtitle">Colleges</div>
-                                        <div class="widget-int">300+</div>
+                                        <div class="widget-int">{{$college->count()}}</div>
                                     </div>
                                     <div>                                    
                                         <div class="widget-title">Total Students</div>
                                         <div class="widget-subtitle">Registered</div>
-                                        <div class="widget-int">1000+</div>
+                                        <div class="widget-int">{{$student->count()}}</div>
                                     </div>
                                      <div>                                    
                                         <div class="widget-title">Total Company</div>
                                         <div class="widget-subtitle">Registered</div>
-                                        <div class="widget-int">100+</div>
+                                        <div class="widget-int">{{$company->count()}}</div>
                                     </div>
                                 </div>                            
                                 <div class="widget-controls">                                

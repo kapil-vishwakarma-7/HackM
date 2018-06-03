@@ -197,7 +197,7 @@
    
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title">Sheena Shrestha</h3>
+              <h3 class="panel-title">{{$student->name}}</h3>
             </div>
             <div class="panel-body">
               <div class="row">
@@ -219,33 +219,33 @@
                   <table class="table table-user-information">
                     <tbody>
                       <tr>
-                        <td>Enrollment:</td>
-                        <td>Programming</td>
+                        <td>Enrollment: </td>
+                        <td>{{$student->enrollment_no}}</td>
                       </tr>
                       <tr>
                         <td>College Name:</td>
-                        <td>06/23/2013</td>
+                        <td>{{$student->college_name}}</td>
                       </tr>
                       <tr>
                         <td>Contact</td>
-                        <td>01/24/1988</td>
+                        <td>{{$student->contact}}</td>
                       </tr>
                    
                          <tr>
                              <tr>
                         <td>Gender</td>
-                        <td>Male</td>
+                        <td>{{$student->gender}}</td>
                       </tr>
                         <tr>
                         <td>Home Address</td>
-                        <td>Kathmandu,Nepal</td>
+                        <td>{{$student->permanent_address}}</td>
                       </tr>
                       <tr>
                         <td>Email</td>
-                        <td><a href="mailto:info@support.com">info@support.com</a></td>
+                        <td><a href="mailto:info@support.com">{{$student->email}}</a></td>
                       </tr>
-                        <td>Phone Number</td>
-                        <td>123-4567-890(
+                        <td>E-Adhar</td>
+                        <td>{{$student->eadhar}}
                         </td>
                            
                       </tr>
@@ -279,46 +279,50 @@
       <div id="collapse2" class="panel-collapse collapse">
         <div class="panel-body">
 
+	{{-- <div class="col-md-6">
+		<div class="form-group">
+	  <input type="text" class="form-control" placeholder="College*" value="{{$student->college_name}}">
+	</div>
+		 --}}
+		 <form id="educational_form">
+		 	{{csrf_field()}}
+</div>
 <div class="col-md-6">
 	<div class="form-group">
-  <input type="text" class="form-control" placeholder="College*">
+  <input type="text" class="form-control" value="{{$student->validity_start}}" placeholder="Start Year*" name="validity_start">
 </div>
 	
 </div>
 <div class="col-md-6">
 	<div class="form-group">
-  <input type="text" class="form-control" placeholder="Start Year*">
+  <input type="text" class="form-control" value="{{$student->validity_end}}" placeholder="End Year*" name="validity_end">
 </div>
 	
 </div>
 <div class="col-md-6">
 	<div class="form-group">
-  <input type="text" class="form-control" placeholder="End Year*">
+  <input type="text" class="form-control" value="{{$student->degree}}" placeholder="Degree*" name="degree">
 </div>
 	
 </div>
 <div class="col-md-6">
 	<div class="form-group">
-  <input type="text" class="form-control" placeholder="Degree*">
+  <input type="text" class="form-control" value="{{$student->course}}" placeholder="Stream*" name="course">
 </div>
 	
 </div>
 <div class="col-md-6">
 	<div class="form-group">
-  <input type="text" class="form-control" placeholder="Stream*">
-</div>
-	
-</div>
-<div class="col-md-6">
-	<div class="form-group">
-  <input type="text" class="form-control" placeholder="Percentage*">
+  <input type="text" class="form-control" value="{{$student->percentage}}" placeholder="Percentage*" name="percentage">
+<input type="hidden" class="form-control" value="{{$student->eadhar}}" placeholder="Percentage*" id="idd">
+
 </div>
 	</div>
 	 <center> 
-                 <button type="button" class="btn btn-primary">Save</button>
+                 <button type="button"  class="btn btn-primary submit">Save</button>
                 </center>
 </div>
-
+</form>
         </div>
       </div>
     </div>
@@ -330,41 +334,42 @@
       </div>
       <div id="collapse3" class="panel-collapse collapse">
           <div class="panel-body">
-
-<div class="col-md-6">
+<form id="job_form">
+	{{csrf_field()}}
+	<div class="col-md-6">
 	<div class="form-group">
-  <input type="text" class="form-control" placeholder="Profile*">
+  <input type="text" class="form-control" name="job" value="{{$student->job}}" placeholder="Profile*">
 </div>
 	
 </div>
 <div class="col-md-6">
 	<div class="form-group">
-  <input type="text" class="form-control" placeholder="Company/Organization*">
+  <input type="text" class="form-control" name="company"  value="{{$student->company}}"  placeholder="Company/Organization*">
 </div>
 	
 </div>
 <div class="col-md-6">
 	<div class="form-group">
-  <input type="text" class="form-control" placeholder="Location/Place*">
+  <input type="text" class="form-control" name="location" value="{{$student->location}}"  placeholder="Location/Place*">
 </div>
 	
 </div>
 <div class="col-md-6">
 	<div class="form-group">
-  <input type="text" class="form-control" placeholder="Start Year*">
+  <input type="text" class="form-control" name="company_join"  value="{{$student->company_join}}"  placeholder="Start Year*">
 </div>
 	
 </div>
 <div class="col-md-6">
 	<div class="form-group">
-  <input type="text" class="form-control" placeholder="End Year*">
+  <input type="text" class="form-control" name="company_end"  value="{{$student->company_end}}"  placeholder="End Year*">
 </div>
 	
 </div>
 <div class="col-md-12"><center> 
-                 <button type="button" class="btn btn-primary">Save</button>
+                 <button type="button" class="btn btn-primary save">Save</button>
                 </center></div>
- 
+ </form>
 	
 </div>
       </div>
@@ -696,7 +701,55 @@
 </div>
 
 
+<script type="text/javascript">
+$(document).ready(function(){
+$('.submit').on('click',function(e){
+    var id=$('#idd').val();
+    // alert(id);
+    
+    e.preventDefault(e);
+        $.ajax({
+        type:"PUT",
+        url:'/student/'+id,
+        data: $('#educational_form').serialize(),
+        success: function(data){
+            alert(data);
+           
+            console.log(data);
 
+        },
+        error: function(data){
+            console.log(data);
+        
+        }
+    })
+    });
+
+$('.save').on('click',function(e){
+    var id=$('#idd').val();
+    alert(id);
+    
+    e.preventDefault(e);
+        $.ajax({
+        type:"POST",
+        url:'/jobdetail/'+id,
+        data: $('#job_form').serialize(),
+        success: function(data){
+            alert(data);
+           
+            console.log(data);
+
+        },
+        error: function(data){
+            console.log(data);
+        
+        }
+    })
+    });
+    });
+
+
+</script>
 
 
 	<script src={{url("js/jquery.flexisel.js")}}></script>
