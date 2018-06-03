@@ -3,6 +3,7 @@
 use App\College;
 use App\University;
 use App\Placement;
+use App\Student;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,7 +41,39 @@ Route::get('placement',function(){
 
                  // dd($bardata[0]->college->name);
 
-	return view('placement',['bardata'=>$bardata,'college'=>$college,'university'=>$university]);
+    $piedata_placed = Placement::where('year',2012)->count() ;
+    $piedata_notplaced = Student::where('validity_end',2012)->count() - $piedata_placed;
+    $pplaced = ($piedata_placed/($piedata_placed+$piedata_notplaced))*100;
+    $pnotplaced = ($piedata_notplaced/($piedata_placed+$piedata_notplaced))*100;
+    // dd($piedata);
+
+    // year wise data
+    $years = Placement::select('year')->distinct()->orderBy('year')->get();
+    $year_data = [];
+    foreach ($years as $e ) {
+    	$year_placed     = Placement::where('year',$e['year'])->count();
+    	$year_notplaced  = Student::where('validity_end',$e)->count() - $year_placed;
+    	$year_data[$e['year']]['placed'] =  $year_placed;
+    	$year_data[$e['year']]['notplaced'] =  $year_notplaced;
+    	$year_data[$e['year']]['year'] =  $e['year'];
+
+    }
+    // dd($year_data);
+    
+    // university college placement 
+    $u_placed = [];
+    $university_id = '2';
+    $u = University::find($university_id);
+    $i=0;  
+    foreach($u->college as $e){
+    	$pl = Placement::where('college_id',$e->college_code)->where('year',2012)->count();
+    	$u_placed[$i]['college'] = $e;
+    	$u_placed[$i++]['placement'] = $pl;
+    }
+    // dd($u_placed[1]['college']->name);
+
+
+	return view('placement',['year_data'=>$year_data,'u_placed'=>$u_placed,'p_placed'=>$pplaced,'p_notplaced'=>$pnotplaced,'bardata'=>$bardata,'college'=>$college,'university'=>$university]);
 });
 
 

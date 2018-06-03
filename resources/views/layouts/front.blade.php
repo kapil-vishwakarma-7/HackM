@@ -281,8 +281,8 @@
 							<input type="email" name="email" placeholder="Email" required=""> 
 						</div>
 						<div class="input-group">
-							<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-							<select name="college_name">
+							
+							<select name="college_name"  class="form-control">
 								@foreach($college as $a)
 								<option value="{{$a->college_code}}">{{$a->name}}</option>
 
@@ -325,7 +325,7 @@
 							<input type="text" placeholder="College type" name="college_type" required=""> 
 						</div>
 						<div class="input-group">
-							<span><i class="fa fa-user" aria-hidden="true"></i></span>
+							
 							<select name="university_id" class="form-control">
 								@foreach($university as $e)
 
